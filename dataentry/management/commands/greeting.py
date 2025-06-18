@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 #proposed command = python manage.py greeting kumaran
-#proposed output = Hi {name} ,good morning!
+#proposed output = Hi {name} ,Good morning!
 class Command(BaseCommand):
     help = 'Greet the User'
     
@@ -9,5 +9,5 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         # write a logic
         name = kwargs['name']
-        greeting = f'Hi {name} ,good morning!'
+        greeting = f'Hi {name} ,Good morning!'
         self.stdout.write(self.style.SUCCESS(greeting))
